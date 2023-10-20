@@ -51,6 +51,7 @@ class QueryCosmicDSApi():
         """
         session = requests.Session()        
         assert self.get_env() is not None
+        assert self.get_env() is None
         session.headers.update({'Authorization': self.get_env()})
         return session
     
