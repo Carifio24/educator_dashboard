@@ -31,7 +31,7 @@ class QueryCosmicDSApi():
     
     def get_env(self):
         api_key = os.getenv('CDS_API_KEY')
-        assert os.environ == {}
+        assert os.environ is None
         if api_key is None:
             print("PLEASE SET CDS_API_KEY ENVIRONMENT VARIABLE")
     
@@ -50,6 +50,7 @@ class QueryCosmicDSApi():
         variables are set correctly)
         """
         session = requests.Session()        
+        assert self.get_env() is not None
         session.headers.update({'Authorization': self.get_env()})
         return session
     
