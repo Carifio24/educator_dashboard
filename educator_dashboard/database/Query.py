@@ -31,6 +31,7 @@ class QueryCosmicDSApi():
     
     def get_env(self):
         api_key = os.getenv('CDS_API_KEY')
+        assert os.environ == {}
         if api_key is None:
             print("PLEASE SET CDS_API_KEY ENVIRONMENT VARIABLE")
     
