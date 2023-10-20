@@ -2,4 +2,5 @@ solara
 pandas
 plotly
 astropy
+python-dotenv
 educator_dashboard @ git+https://github.com/Carifio24/educator_dashboard.git@deployment-testing
